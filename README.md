@@ -1,0 +1,16 @@
+# サンプルデータの説明
+- sales ・・・購買ログ
+    - UserID: ユーザー ID
+    - ProductID: 商品 ID
+    - Timestamp: 購買時刻
+- UserMaster ・・・属性データ
+    - USerID: ユーザー ID
+    - Age: 年齢
+    - Sex: 性別
+    - Pref: 都道府県
+- product ・・・商品マスタデータ
+    - ProductID: 商品 ID
+    - ProductName: 商品名
+    - Price: 価格
+    - Category: 商品ジャンル
+    - CreatedDate: 商品が作られて年月日
