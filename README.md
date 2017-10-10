@@ -4,7 +4,7 @@
     - ProductID: 商品 ID
     - Timestamp: 購買時刻
 - UserMaster ・・・属性データ
-    - USerID: ユーザー ID
+    - UserID: ユーザー ID
     - Age: 年齢
     - Sex: 性別
     - Pref: 都道府県
