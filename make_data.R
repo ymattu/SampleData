@@ -1,4 +1,3 @@
-setwd("~/Desktop/r_lecture/sample_data/")
 set.seed(71)
 library(dplyr)
 
