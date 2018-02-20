@@ -1,15 +1,15 @@
-libname sam "\\Mac\Home\Desktop\r_lecture\sample_data" ;
-filename prd "\\Mac\Home\Desktop\r_lecture\sample_data\product.csv" encoding="utf-8" ;
-filename sale "\\Mac\Home\Desktop\r_lecture\sample_data\sales.csv" encoding="utf-8" ;
+libname sam "\\Mac\Home\Downloads\SampleData/sas7bdat" ;
+filename prd "\\Mac\Home\Downloads\SampleData\csv\Products.csv" encoding="utf-8" ;
+filename sale "\\Mac\Home\Downloads\SampleData\csv\Sales.csv" encoding="utf-8" ;
 
-proc import out=sam.product
+proc import out=sam.Products
   datafile=prd
   dbms=csv replace ;
     getnames=yes ;
     datarow=2 ;
  run ;
 
- data sam.sales ;
+ data sam.Sales ;
   infile sale missover dsd firstobs=2 ;
   length
     UserId $20
