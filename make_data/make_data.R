@@ -1,5 +1,5 @@
 set.seed(71)
-library(dplyr)
+library(tidyverse)
 
 # タイムスタンプをランダムに生成する関数
 RandomTimeStamp <- function(M,
@@ -14,9 +14,9 @@ RandomTimeStamp <- function(M,
 }
 
 # 全行数
-N <- 100000
+N <- 1000000
 # 人数
-M <- 10000
+M <- 100000
 # 商品数
 P <- 10000
 
@@ -36,14 +36,18 @@ product <- data.frame(
   CreatedDate = Created
 )
 
-write_csv(product, "product.csv")
-write_tsv(product, "product.tsv")
-openxlsx::write.xlsx(product, file = "product.xlsx")
+write_csv(product, "./csv/Products.csv")
+write.csv(product,
+          "./csv/Products_cp932.csv",
+          row.names = FALSE,
+          fileEncoding = "CP932")
+write_tsv(product, "./csv/Products.tsv")
+openxlsx::write.xlsx(product, file = "./xlsx/Products.xlsx")
 
 # 購買ログ
 UserID <- stringi::stri_rand_strings(n = M, length = 20)
 UserSale <- sample(UserID, N, replace = T)
-ProductID2 <- sample(ProductId, N, replace = T)
+ProductID2 <- sample(ProductID, N, replace = T)
 TimeStamp <- RandomTimeStamp(N)
 
 sales <- data.frame(
@@ -52,9 +56,9 @@ sales <- data.frame(
   Timestamp = TimeStamp
 )
 
-write_csv(sales, "sales.csv")
-write_tsv(sales, "sales.tsv")
-openxlsx::write.xlsx(sales, file = "sales.xlsx")
+write_csv(sales, "./csv/Sales.csv")
+write_tsv(sales, "./tsv/Sales.tsv")
+openxlsx::write.xlsx(sales, file = "./xlsx/Sales.xlsx")
 
 # ユーザーの属性情報
 ages <- c(18:65)
@@ -74,4 +78,4 @@ UserMaster <- data.frame(
   Sex = gender,
   Pref = pref
 )
-write_csv(UserMaster, "UserMaster.csv")
+write_csv(UserMaster, "./csv/UserMaster.csv")
