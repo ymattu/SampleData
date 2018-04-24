@@ -1,5 +1,5 @@
-# サンプルデータの説明
-- sales ・・・購買ログ
+# サンプルデータの説明(csv, tsv, xlsax, sas7bdatフォルダ内)
+- Sales ・・・購買ログ
     - UserID: ユーザー ID
     - ProductID: 商品 ID
     - Timestamp: 購買時刻
@@ -13,4 +13,4 @@
     - ProductName: 商品名
     - Price: 価格
     - Category: 商品ジャンル
-    - CreatedDate: 商品が作られて年月日
+    - CreatedDate: 商品が作られた年月日
