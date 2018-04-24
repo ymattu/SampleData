@@ -1,4 +1,4 @@
-# サンプルデータの説明(csv, tsv, xlsax, sas7bdatフォルダ内)
+# サンプルデータの説明(csv, tsv, xlsx, sas7bdatフォルダ内)
 - Sales ・・・購買ログ
     - UserID: ユーザー ID
     - ProductID: 商品 ID
