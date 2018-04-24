@@ -41,7 +41,7 @@ write.csv(product,
           "./csv/Products_cp932.csv",
           row.names = FALSE,
           fileEncoding = "CP932")
-write_tsv(product, "./csv/Products.tsv")
+write_tsv(product, "./tsv/Products.tsv")
 openxlsx::write.xlsx(product, file = "./xlsx/Products.xlsx")
 
 # 購買ログ
