@@ -8,7 +8,7 @@
     - Age: 年齢
     - Sex: 性別
     - Pref: 都道府県
-- product ・・・商品マスタデータ
+- Products ・・・商品マスタデータ
     - ProductID: 商品 ID
     - ProductName: 商品名
     - Price: 価格
